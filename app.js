@@ -286,8 +286,15 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => toast.classList.remove("visible"), 3500);
     }
 
+    // --- FORM HANDLING — branchable (Formspree / Netlify / WP Forminator) ---
+    // Config: choisis UNE option. Par défaut: simulation (aucun backend).
+    // Option A (recommandé statique): Formspree → crée un form sur formspree.io, remplace FORMSPREE_ID.
+    // Option B: Netlify Forms → ajoute netlify + honeypot, deploy sur Netlify détecte auto.
+    // Option C: Garder WordPress Forminator → POST vers https://kids-training-reunion.re/wp-admin/admin-ajax.php (nécessite CORS)
+    const FORM_ENDPOINT = ""; // ex: "https://formspree.io/f/xqakqgqy" ou "" pour simulation
+    const FORM_ENDPOINT_METHOD = "POST"; // POST
     if (form) {
-        form.addEventListener("submit", (e) => {
+        form.addEventListener("submit", async (e) => {
             e.preventDefault();
             let valid = true;
             const required = form.querySelectorAll("[required]");
@@ -310,6 +317,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (emailGroup) emailGroup.classList.remove("has-error");
                 }
             }
+            // honeypot anti-spam (champ caché)
+            const honeypot = form.querySelector('[name="_gotcha"]');
+            if (honeypot && honeypot.value) { showToast("Envoi bloqué.", false); return; }
             if (!valid) {
                 showToast("Veuillez remplir tous les champs requis correctement.", false);
                 return;
@@ -319,24 +329,39 @@ document.addEventListener("DOMContentLoaded", () => {
             const orig = btn.innerHTML;
             btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:spin 1s linear infinite"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2" stroke-dasharray="40" stroke-dashoffset="20" stroke-linecap="round"/></svg><span>Envoi...</span>`;
             btn.disabled = true;
-            setTimeout(() => {
-                if (toast) {
+            // Si aucun endpoint configuré → simulation (dev)
+            if (!FORM_ENDPOINT) {
+                setTimeout(() => {
+                    showToast("Message envoyé avec succès ! (simulation — configure FORM_ENDPOINT dans app.js)", true);
+                    btn.innerHTML = orig;
+                    btn.disabled = false;
+                    form.reset();
+                }, 900);
+                return;
+            }
+            try {
+                const data = new FormData(form);
+                // enrichissement pour Formspree
+                data.append("_subject", "Nouveau message — Kids Training Réunion");
+                const res = await fetch(FORM_ENDPOINT, {
+                    method: FORM_ENDPOINT_METHOD,
+                    body: data,
+                    headers: { "Accept": "application/json" }
+                });
+                if (res.ok) {
                     showToast("Message envoyé avec succès ! Nous vous répondrons rapidement.", true);
+                    form.reset();
                 } else {
-                    btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Message envoyé !</span>`;
-                    btn.style.background = "var(--teal)";
-                    setTimeout(() => {
-                        btn.innerHTML = orig;
-                        btn.style.background = "";
-                        btn.disabled = false;
-                        form.reset();
-                    }, 3000);
-                    return;
+                    const j = await res.json().catch(()=>null);
+                    throw new Error(j?.error || "Erreur serveur");
                 }
+            } catch (err) {
+                console.error(err);
+                showToast("Erreur d'envoi. Réessayez ou écrivez à contact@kids-training-reunion.re", false);
+            } finally {
                 btn.innerHTML = orig;
                 btn.disabled = false;
-                form.reset();
-            }, 1300);
+            }
         });
         form.querySelectorAll("input, select, textarea").forEach(field => {
             field.addEventListener("input", () => {

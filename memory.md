@@ -100,3 +100,33 @@
 - `node --check app.js` / `python -m json.tool` pour localStorage
 - `grep -r Behance` doit être 0
 - `cat _admin_backup_KTR/firestore.rules` / `firebase deploy --only firestore` (depuis backup si besoin admin)
+
+## 14. Vérification finale pre-push (2026-09-04)
+- **Manifest/Favicon** `image/site.webmanifest:1` corrigé (`name`/`short_name`/`theme_color #FF5A3C`/`background #FBF5EC`/`icons` relatifs), favicons `16/32/64` normalisés sur 6 HTML + ajout `theme-color`.
+- **SEO** `index.html:14` + `blog.html:9` + `chat.html:9` etc. : `og:title/description/image/type/locale` + `twitter:card` + `canonical https://kids-training-reunion.re/...` + `JSON-LD SportsActivityLocation` `index.html:30` + `robots.txt` + `sitemap.xml` + `README.md`.
+- **A11y/Sécu** : `navToggle` `aria-expanded/aria-controls` sur toutes pages, `autocomplete`/`aria-required`/`pattern tel` + mention RGPD sous form `index.html:663`, `rel="noopener"` CNIL `politique-confidentialite.html:101`, hero hint inline → classe `.hero-discuss-hint` `styles.css:840`, footer `href="#"` → `index.html`.
+- **Contenu** : retrait RickRoll `blog.html:270` (`dQw4w9WgXcQ` → `video:""` + image fallback, `youtube-nocookie.com`), `site.webmanifest` JSON validé, `sitemap.xml` XML validé, `app.js` `node --check` OK, `git init` + `.gitignore` + commit `0f9ec63`.
+- **Reste à déployer** : vérifier domaine `kids-training-reunion.re` dans `canonical`/`sitemap`/`manifest`, tester Tawk `6a98456eef935f3443550c36/1k1hcuese`, remplacer Unsplash par photos réelles avec `width`/`height`+`loading="lazy"`, décider `image/image kids/*.png` non utilisés.
+
+## 15. Formulaire — état actuel & connexion (2026-09-04 — question utilisateur)
+- **Site prod actuel https://kids-training-reunion.re/** : WordPress 6 + Divi 4.27.8 (`et-cache`, `Divi Pixel`). Formulaire = **Forminator (WPMU DEV)** `forminator-custom-form-604` (`id="forminator-module-604"`, `form_id=604`, `page_id=138`). Champs prod : `name-1` (Prénom *), `email-1` (*), `phone-1`, `textarea-1` (Message 180 chars), `captcha-1` **reCAPTCHA invisible** `sitekey 6LeC6EkrAAAAAG-i1O-AmSStWmV4FD0vUu0SjrVS` `data-badge inline data-size invisible`. Submit : `POST https://kids-training-reunion.re/wp-admin/admin-ajax.php` avec `action=forminator_submit_form_custom-forms`, `forminator_nonce=5188c3e18a`, `referer_url`, `current_url`, `render_id=0`, `form_type=default`. Plugins annexes : Complianz GDPR, WP Rocket, Trustindex (7 avis Google), Divi Pixel popup.
+- **Nouveau site statique** `index.html:663` `#contactForm` : champs enrichis vs prod (`prenom`, `nom`, `email`, `telephone` tel pattern, `age` 3–5/6–8/9–12/13–17, `activite` Kids Training/Boxe Ludique, `lieu` 5 lieux, `message`). Anciennement simulation `setTimeout 1300ms` + toast. Maintenant branchable `app.js:275` :
+  ```js
+  const FORM_ENDPOINT = "" // → mettre https://formspree.io/f/XXXX ou https://formsubmit.co/contact@kids-training-reunion.re ou WP admin-ajax
+  ```
+  Logique `app.js:289` : validation `[required]` + email regex + honeypot `_gotcha` `index.html:664` + `fetch` `FormData` + `_subject`. Si `FORM_ENDPOINT==""` → simulation dev. Sinon `fetch POST Accept: application/json`, `showToast` succès/erreur.
+- **Options pour connecter (choisir 1)** :
+  - **A. Formspree (recommandé statique)** : créer form sur formspree.io → coller `https://formspree.io/f/xqakqgqy` dans `FORM_ENDPOINT`, ajouter `_gotcha` déjà présent, vérifier email `contact@kids-training-reunion.re`. Gratuit 50/mois, captcha inclus.
+  - **B. Netlify Forms** : si deploy Netlify, mettre `data-netlify="true" name="contact"` + honeypot `netlify-honeypot="_gotcha"` sur `<form>`, Netlify détecte auto sans JS. Retirer `FORM_ENDPOINT` ou le laisser vide.
+  - **C. Garder Forminator WP** : `FORM_ENDPOINT="https://kids-training-reunion.re/wp-admin/admin-ajax.php"` + mapping champs `name-1↔prenom+nom`, `email-1↔email`, etc. + ajouter `form_id=604` hidden + gérer CORS (`Access-Control-Allow-Origin`). Nécessite WordPress toujours hébergé.
+  - **D. FormSubmit.co** : `FORM_ENDPOINT="https://formsubmit.co/contact@kids-training-reunion.re"` sans clé, ajoute `_captcha=false` / `_template=table`.
+  - **E. Serverless (Vercel/Netlify Function + Resend/Brevo)** : pour contrôle total + RGPD, créer `/api/contact` qui envoie via Resend/Brevo/SendGrid vers `contact@kids-training-reunion.re`, puis `FORM_ENDPOINT="/api/contact"`.
+- **TODO Formulaire** : choisir option, remplir `FORM_ENDPOINT`, tester envoi réel, ajouter éventuel reCAPTCHA/Turnstile si spam, vérifier RGPD (mention déjà ajoutée `index.html:692` lien politique), config SPF/DKIM domaine pour éviter spam.
+- **Reste à faire global (à ne pas oublier avant prod)** :
+  - Domaine : adapter `canonical`/`sitemap.xml:2`/`robots.txt:3`/`manifest` si autre domaine que `kids-training-reunion.re`.
+  - Tawk.to `app.js:64` vérifier IDs `6a98456eef935f3443550c36/1k1hcuese` dans dashboard Tawk (test widget).
+  - Images : remplacer Unsplash (`photo-152460364...`, `photo-145148145...` etc.) par photos réelles, ajouter `width`/`height` + `loading="lazy"` + `decoding="async"`, optimiser WebP, supprimer ou intégrer `image/image kids/concours.png` + `nouveau 24 août.png`.
+  - Vidéo blog `blog.html:270` : remplacer `video:""` par vrai YouTube `youtube-nocookie.com` quand disponible.
+  - GitHub : `git remote add origin https://github.com/<user>/<repo>.git && git branch -M main && git push -u origin main`.
+  - Tests : `python3 -m http.server 8000` → dark mode, mobile menu, ancres `#nouveautes/#lieux/#faq`, FAQ accordion, blog filtres/modal, form validation + honeypot.
+  - Légal : vérifier `firestore.rules` si admin réactivé depuis `_admin_backup_KTR/`, `Authorized domains` Firebase, `Storage` si upload images.
