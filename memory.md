@@ -121,7 +121,7 @@
   - **C. Garder Forminator WP** : `FORM_ENDPOINT="https://kids-training-reunion.re/wp-admin/admin-ajax.php"` + mapping champs `name-1↔prenom+nom`, `email-1↔email`, etc. + ajouter `form_id=604` hidden + gérer CORS (`Access-Control-Allow-Origin`). Nécessite WordPress toujours hébergé.
   - **D. FormSubmit.co** : `FORM_ENDPOINT="https://formsubmit.co/contact@kids-training-reunion.re"` sans clé, ajoute `_captcha=false` / `_template=table`.
   - **E. Serverless (Vercel/Netlify Function + Resend/Brevo)** : pour contrôle total + RGPD, créer `/api/contact` qui envoie via Resend/Brevo/SendGrid vers `contact@kids-training-reunion.re`, puis `FORM_ENDPOINT="/api/contact"`.
-- **TODO Formulaire** : choisir option, remplir `FORM_ENDPOINT`, tester envoi réel, ajouter éventuel reCAPTCHA/Turnstile si spam, vérifier RGPD (mention déjà ajoutée `index.html:692` lien politique), config SPF/DKIM domaine pour éviter spam.
+- **TODO Formulaire — Option 1 choisie (2026-09-04)** : `FORM_ENDPOINT="https://formsubmit.co/ajax/contact@kids-training-reunion.re"` `app.js:294` + `index.html:664` honeypot `_gotcha` + hidden `_captcha=false` `_template=table` `_subject` `_autoresponse`. 1er envoi → valider email de confirmation FormSubmit reçu sur `contact@kids-training-reunion.re` (sinon messages bloqués). Tester en prod avec `python3 -m http.server` puis envoi réel, vérifier toast succès/erreur `app.js:349`.
 - **Reste à faire global (à ne pas oublier avant prod)** :
   - Domaine : adapter `canonical`/`sitemap.xml:2`/`robots.txt:3`/`manifest` si autre domaine que `kids-training-reunion.re`.
   - Tawk.to `app.js:64` vérifier IDs `6a98456eef935f3443550c36/1k1hcuese` dans dashboard Tawk (test widget).

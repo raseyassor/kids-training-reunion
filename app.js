@@ -291,8 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Option A (recommandé statique): Formspree → crée un form sur formspree.io, remplace FORMSPREE_ID.
     // Option B: Netlify Forms → ajoute netlify + honeypot, deploy sur Netlify détecte auto.
     // Option C: Garder WordPress Forminator → POST vers https://kids-training-reunion.re/wp-admin/admin-ajax.php (nécessite CORS)
-    const FORM_ENDPOINT = ""; // ex: "https://formspree.io/f/xqakqgqy" ou "" pour simulation
-    const FORM_ENDPOINT_METHOD = "POST"; // POST
+    const FORM_ENDPOINT = "https://formsubmit.co/ajax/contact@kids-training-reunion.re";
+    const FORM_ENDPOINT_METHOD = "POST";
     if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
