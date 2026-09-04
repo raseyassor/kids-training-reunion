@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Kids Training Réunion</title>
+  <meta name="description" content="Les actualités, conseils et bons plans Kids Training Réunion pour vos enfants.">
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico?v=7" id="favicon">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png?v=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png?v=7">
+  <link rel="icon" type="image/png" sizes="64x64" href="image/favicon-64x64.png?v=7">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png?v=7">
+  <link rel="manifest" href="image/site.webmanifest">
+  <meta name="theme-color" content="#FF5A3C">
+  <meta property="og:title" content="Blog — Kids Training Réunion">
+  <meta property="og:description" content="Actualités, conseils et bons plans Kids Training Réunion pour vos enfants.">
+  <meta property="og:image" content="image/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kids-training-reunion.re/blog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blog.css">
+  <script>
+    (function () {
+      var theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      var fav = document.getElementById('favicon');
+      if(fav) fav.href = 'image/favicon.ico?v=7';
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+        <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="index.html#nouveautes" class="nav-link">À la une</a>
+        <a href="index.html#lieux" class="nav-link">Infos / Pratique</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-menu-bg">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="menu-wave" d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="var(--coral)" />
+      </svg>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-link">Accueil</a>
+      <a href="index.html#nouveautes" class="mobile-link">À la une</a>
+      <a href="index.html#lieux" class="mobile-link">Infos / Pratique</a>
+      <a href="index.html#faq" class="mobile-link">FAQ</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="apropos.html" class="mobile-link">À propos</a>
+      <a href="chat.html" class="mobile-link mobile-link--secondary">Discuter sans quitter le site</a>
+    </div>
+  </div>
+
+  <!-- HERO éditorial sport -->
+  <section class="blog-hero-behance">
+    <div class="container">
+      <div class="blog-hero-grid">
+        <div class="blog-hero-left">
+          <span class="section-tag" style="background:var(--coral); color:#fff; transform:skewX(-6deg);">Journal • 2026</span>
+          <h1 class="blog-hero-title">Le <span>Journal</span><br><em>Kids Training</em></h1>
+          <p class="blog-hero-desc">Conseils d’entraîneurs, nouveautés, coulisses — formats courts à lire ou à regarder.</p>
+          <div class="blog-hero-meta">
+            <span class="blog-hero-stat"><strong id="countNouveaute">01</strong> Nouveautés</span>
+            <span class="blog-hero-divider"></span>
+            <span class="blog-hero-stat"><strong id="countConseil">02</strong> Conseils</span>
+            <span class="blog-hero-divider"></span>
+            <span class="blog-hero-stat"><strong id="countVideo">03</strong> Vidéos</span>
+          </div>
+          <div class="blog-admin-only" id="adminBanner">
+            <strong>Mode Admin actif</strong> — crée, modifie, supprime directement. Les visiteurs ne voient que la lecture.
+          </div>
+        </div>
+        <div class="blog-hero-right">
+          <div class="blog-hero-cover">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Kids sport editorial">
+            <div class="blog-hero-cover-badge">N°03 — 2026</div>
+          </div>
+          <div class="blog-hero-strip">KIDS TRAINING RÉUNION • SAINT-DENIS • 3—17 ANS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTRES + CARROUSEL -->
+  <section style="padding: 18px 0 10px; background:var(--paper); border-bottom:1px solid var(--border); position:sticky; top:66px; z-index:10;">
+    <div class="container">
+      <div class="blog-filter-bar" id="blogFilterBar">
+        <button class="blog-filter active" data-filter="all">Tout • <span id="countAll">0</span></button>
+        <button class="blog-filter" data-filter="Nouveauté">Nouveauté</button>
+        <button class="blog-filter" data-filter="Conseil">Conseil</button>
+        <button class="blog-filter" data-filter="Vidéo">Vidéo</button>
+        <button class="blog-filter" data-filter="Événement">Événement</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrousel supprimé — pas de répétition, garde uniquement grille 4 petites cartes -->
+
+  <!-- BLOG ARTICLES — grille 4 max par ligne, nouvelle ligne auto -->
+  <section style="padding: 18px 0 var(--section-pad);">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid">
+        <!-- Articles publics — chargés via JS localStorage / Firestore — 4 max par ligne -->
+      </div>
+      <p id="blogEmpty" style="display:none; text-align:center; color:var(--ink-faint); margin-top:24px;">Aucun article pour l'instant. L'admin peut en créer un ci-dessus.</p>
+    </div>
+  </section>
+
+  <!-- MODAL BLOG — lecture détaillée -->
+  <div id="blogModal" style="display:none; position:fixed; inset:0; z-index:2000; background:rgba(28,27,46,0.6); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:18px;">
+    <div style="background:var(--paper); border-radius:18px; max-width:720px; width:100%; max-height:90vh; overflow:auto; border:1.5px solid var(--ink); box-shadow:8px 8px 0 var(--ink); position:relative;">
+      <div style="position:relative;">
+        <img id="modalImg" src="" alt="" style="width:100%; height:260px; object-fit:cover; display:none; border-bottom:1.5px solid var(--ink);">
+        <div id="modalVideoWrap" style="display:none; aspect-ratio:16/9; background:#000; border-bottom:1.5px solid var(--ink);"></div>
+        <button id="modalClose" aria-label="Fermer" style="position:absolute; top:14px; right:14px; width:38px; height:38px; border-radius:50%; border:1.5px solid var(--ink); background:var(--paper); color:var(--ink); font-size:1.1rem; cursor:pointer; box-shadow:2px 2px 0 var(--ink);">✕</button>
+      </div>
+      <div style="padding:22px 22px 18px;">
+        <span id="modalTag" class="blog-card-tag" style="transform:skewX(-6deg); display:inline-block;"></span>
+        <h2 id="modalTitle" style="font-family:var(--font-display); font-size:1.7rem; font-weight:700; line-height:1.2; margin:14px 0 8px; letter-spacing:-0.02em;"></h2>
+        <p id="modalDate" style="color:var(--ink-faint); font-size:0.82rem; margin-bottom:14px;"></p>
+        <div id="modalContent" style="color:var(--ink-soft); line-height:1.75; font-size:0.96rem;"></div>
+        <div style="margin-top:18px; display:flex; gap:10px;">
+          <a href="index.html#contact" class="btn btn-primary btn-sm"><span>Réserver une séance</span></a>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('blogModal').style.display='none'">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+            <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+          </a>
+          <p>Des séances de sport fun et ludiques pour le bien-être et l'épanouissement de vos enfants de 3 à 17 ans.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kids_training_reunion/" class="footer-social" aria-label="Instagram"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="https://www.youtube.com/@KidsTrainingReunion" class="footer-social" aria-label="YouTube"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@kidstrainingreunion" class="footer-social" aria-label="TikTok"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg></a>
+            <a href="https://www.facebook.com/profile.php?id=100055377537172" class="footer-social" aria-label="Facebook"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Explorer</p>
+          <div class="footer-nav-compact">
+            <div class="footer-links">
+              <a href="index.html#nouveautes">Nouveauté</a>
+              <a href="index.html#concours">Jeux Concours</a>
+              <a href="index.html#activites">Activités</a>
+              <a href="index.html#lieux">Lieux</a>
+              <a href="index.html#tarifs">Tarifs</a>
+            </div>
+            <div class="footer-links footer-links--muted">
+              <a href="index.html#confiance">Pourquoi nous</a>
+              <a href="index.html#faq">FAQ</a>
+              <a href="index.html#contact">Contact</a>
+              <a href="blog.html">Blog</a>
+              <a href="chat.html">Discuter</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Nos activités</p>
+          <div class="sites-grid">
+            <a href="https://bike-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">🚲</span>
+              <span class="site-link-label"><span class="site-link-name">Bike Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://sport-anniversaire-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--coral-glow); color: var(--coral);">🎂</span>
+              <span class="site-link-label"><span class="site-link-name">Sport Anniversaire</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://boxe-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--sun-glow); color: var(--sun-dark);">🥊</span>
+              <span class="site-link-label"><span class="site-link-name">Boxe Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://foot-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">⚽</span>
+              <span class="site-link-label"><span class="site-link-name">Foot Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Légal</p>
+          <div class="footer-links"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Kids Training Réunion. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+    <script type="module">
+    // Blog — lecture publique seule (admin hors root)
+    const LS_KEY = "ktr_blog_posts";
+    const BLOG_VERSION = "v4_small4col";
+    function loadLocalPosts(){ try{ return JSON.parse(localStorage.getItem(LS_KEY)||"[]"); }catch{ return []; } }
+    function saveLocalPosts(posts){ localStorage.setItem(LS_KEY, JSON.stringify(posts)); }
+    function parseBold(text){ if(!text) return ""; return text.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\n/g,"<br>"); }
+    function ytId(url){ if(!url) return null; const m=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/); return m?m[1]:null; }
+    function formatDate(d){ try{ return new Date(d).toLocaleDateString("fr-FR",{day:"2-digit",month:"short",year:"numeric"}); }catch{ return ""; } }
+    const _existing = loadLocalPosts();
+    const _storedVer = localStorage.getItem("blog_version");
+    if(_existing.length===0 || _storedVer!==BLOG_VERSION){
+      localStorage.setItem("blog_version", BLOG_VERSION);
+      saveLocalPosts([
+        { id:"1", title:"Nouvelle tranche d'âge : dès 12 mois !", tag:"Nouveauté", image:"https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80", excerpt:"Éveil sensoriel dès 12 mois, avec parent. Bellepierre, centre-ville & Trinité.", content:"**Grande nouveauté pilote** : nous accueillons les tout-petits **dès 12 mois** — toujours **avec un parent**.\n\n**12–24 mois** : éveil sensoriel, parcours doux, jeux de manipulation pour **découvrir et s'éveiller** en sécurité.\n**2–3 ans** : motricité globale, autonomie et **confiance** via mini-défis et coopération.\n\nLieux pilotes : **Bellepierre** (salle), **Centre-ville** (salle lumineuse) et **Parc de la Trinité** (plein air). Matériel fourni, groupes de 8 max, encadrants diplômés.\n\n**Cliquez pour réserver** — séance découverte 6€, inscription toute l'année.", template:"classic", boldTitle:true, featured:true, createdAt: new Date("2026-08-28").toISOString(), author:"Kids Training Réunion" },
+        { id:"2", title:"5 bienfaits du sport pour les enfants", tag:"Conseil", image:"https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80", excerpt:"Motricité, confiance, socialisation, concentration et joie — nos 5 piliers.", content:"**Pourquoi inscrire votre enfant dès 3 ans ?** Nos coachs diplômés observent 5 bienfaits majeurs :\n\n**1. Motricité** : coordination, équilibre, latéralité via parcours et jeux de balles.\n**2. Confiance** : réussir un mini-défi, oser, progresser à son rythme.\n**3. Socialisation** : fair-play, coopération, respect des règles en petit groupe (10–12).\n**4. Concentration** : écoute, consignes, mémoire de séquence.\n**5. Plaisir** : le goût de l'effort sans pression, sourire garanti à la sortie.\n\nSéances 45 min, matériel fourni. **Essayez la découverte à 6€**.", template:"horizontal", boldTitle:true, featured:true, createdAt: new Date("2026-08-20").toISOString(), author:"Coach Kids Training" },
+        { id:"3", title:"Concours : 1 mois offert — comment participer ?", tag:"Vidéo", image:"https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80", video:"", excerpt:"Tirage le 5 septembre • 5 gagnants • 1 mois offert.", content:"**Gagnez 1 mois offert** (valeur 40€) — **5 gagnants** tirés au sort le **5 septembre 2026**.\n\n**Comment participer (30 sec) :**\n**1. Suivre** la page @kids_training_reunion\n**2. Taguer 3 personnes** en commentaire de la publication concours\n**3. Partager** la publication en story / fil d'actualité\n\nOuvert de **1 à 17 ans**, tous lieux confondus (Bellepierre, Ste-Clotilde, Montagne, Trinité, Centre-ville). Résultats annoncés en story + contact DM. Bonne chance !\n\n*Jeu gratuit sans obligation d'achat. Règlement sur demande. Remplacez video par lien YouTube réel quand disponible.*", template:"classic", boldTitle:true, featured:true, createdAt: new Date("2026-08-15").toISOString(), author:"Kids Training Réunion" }
+      ]);
+    }
+    const blogGrid = document.getElementById("blogGrid");
+    const blogEmpty = document.getElementById("blogEmpty");
+    function renderCard(post){
+      const date = formatDate(post.createdAt);
+      const boldClass = post.boldTitle ? ' style="font-weight:800;"' : '';
+      const contentHtml = parseBold(post.excerpt||post.content||"");
+      const videoId = ytId(post.video);
+      const img = post.image || "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80";
+      let cls="blog-card";
+      if(post.template==="horizontal") cls+=" blog-card--horizontal";
+      else if(post.template==="horizontal-reverse") cls+=" blog-card--horizontal blog-card--horizontal-reverse";
+      else if(post.template==="hero") cls+=" blog-card--hero";
+      else if(post.template==="video" && videoId) cls+=" blog-card--video";
+      else if(post.template==="minimal") cls+=" blog-card--minimal";
+      let media="";
+      if(post.template==="video" && videoId){
+        media=`<div class="blog-card-img"><img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" alt="${post.title}" loading="lazy"></div>`;
+      } else if(post.template!=="minimal"){
+        media=`<div class="blog-card-img"><img src="${img}" alt="${post.title}" loading="lazy"></div>`;
+      }
+      return `<div class="${cls}" data-id="${post.id}" data-tag="${post.tag}">${media}<div class="blog-card-body"><div class="blog-card-meta"><span class="blog-card-tag" data-tag="${post.tag}">${post.tag}</span><span>${date}</span></div><h3${boldClass}>${post.title}</h3><p>${contentHtml}</p></div></div>`;
+    }
+    function renderAll(){
+      const posts = loadLocalPosts().sort((a,b)=> new Date(b.createdAt)-new Date(a.createdAt));
+      if(blogGrid){
+        blogGrid.innerHTML="";
+        if(posts.length===0){ if(blogEmpty) blogEmpty.style.display="block"; } else { if(blogEmpty) blogEmpty.style.display="none"; posts.forEach(p=> blogGrid.innerHTML+=renderCard(p)); }
+      }
+      applyFilter(); updateCounts();
+      if(blogGrid){
+        blogGrid.querySelectorAll(".blog-card").forEach(card=>{
+          card.style.cursor="pointer";
+          card.addEventListener("click", ()=>{
+            const id=card.dataset.id;
+            const post=loadLocalPosts().find(p=>p.id===id);
+            if(post) openModal(post);
+          });
+        });
+      }
+    }
+    const filterBar = document.getElementById("blogFilterBar");
+    let activeFilter="all";
+    function applyFilter(){
+      if(blogGrid){
+        const cards=blogGrid.querySelectorAll(".blog-card");
+        let visible=0;
+        cards.forEach(c=>{ const tag=c.dataset.tag; const show=activeFilter==="all"||tag===activeFilter; c.style.display=show?"":"none"; if(show) visible++; });
+        if(blogEmpty){ blogEmpty.style.display=visible===0?"block":"none"; if(visible===0) blogEmpty.textContent=`Aucun article dans "${activeFilter}".`; else blogEmpty.textContent="Aucun article pour l'instant."; }
+      }
+    }
+    if(filterBar){
+      filterBar.querySelectorAll(".blog-filter").forEach(btn=>{
+        btn.addEventListener("click", ()=>{ filterBar.querySelectorAll(".blog-filter").forEach(b=>b.classList.remove("active")); btn.classList.add("active"); activeFilter=btn.dataset.filter; applyFilter(); });
+      });
+    }
+    function updateCounts(){
+      const posts=loadLocalPosts();
+      const el=document.getElementById("countAll"); if(el) el.textContent=posts.length;
+      const counts={"Nouveauté":0,"Conseil":0,"Vidéo":0};
+      posts.forEach(p=>{ if(counts.hasOwnProperty(p.tag)) counts[p.tag]++; });
+      const elN=document.getElementById("countNouveaute"); const elC=document.getElementById("countConseil"); const elV=document.getElementById("countVideo");
+      if(elN) elN.textContent=String(counts["Nouveauté"]).padStart(2,"0");
+      if(elC) elC.textContent=String(counts["Conseil"]).padStart(2,"0");
+      if(elV) elV.textContent=String(counts["Vidéo"]).padStart(2,"0");
+    }
+    const blogModal=document.getElementById("blogModal");
+    const modalImg=document.getElementById("modalImg");
+    const modalVideoWrap=document.getElementById("modalVideoWrap");
+    const modalTag=document.getElementById("modalTag");
+    const modalTitle=document.getElementById("modalTitle");
+    const modalDate=document.getElementById("modalDate");
+    const modalContent=document.getElementById("modalContent");
+    const modalClose=document.getElementById("modalClose");
+    function openModal(post){
+      const videoId=ytId(post.video);
+      if(videoId){ modalImg.style.display="none"; modalVideoWrap.style.display="block"; modalVideoWrap.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${post.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0;"></iframe>`; }
+      else if(post.image){ modalVideoWrap.style.display="none"; modalVideoWrap.innerHTML=""; modalImg.src=post.image; modalImg.style.display="block"; }
+      else{ modalImg.style.display="none"; modalVideoWrap.style.display="none"; }
+      modalTag.textContent=post.tag; modalTag.setAttribute("data-tag",post.tag);
+      modalTitle.textContent=post.title;
+      modalDate.textContent=formatDate(post.createdAt)+" • "+(post.author||"");
+      modalContent.innerHTML=parseBold(post.content||post.excerpt||"");
+      blogModal.style.display="flex"; document.body.style.overflow="hidden";
+    }
+    function closeModal(){ blogModal.style.display="none"; document.body.style.overflow=""; modalVideoWrap.innerHTML=""; }
+    if(modalClose) modalClose.addEventListener("click", closeModal);
+    if(blogModal) blogModal.addEventListener("click",(e)=>{ if(e.target===blogModal) closeModal(); });
+    document.addEventListener("keydown",(e)=>{ if(e.key==="Escape" && blogModal.style.display==="flex") closeModal(); });
+    renderAll();
+    document.querySelectorAll('.mobile-link').forEach(link=>{
+      link.addEventListener('click',()=>{ document.getElementById('navToggle').classList.remove('active'); document.getElementById('mobileMenu').classList.remove('active'); document.body.style.overflow=''; });
+    });
+  </script>
+</body>
+
+</html>

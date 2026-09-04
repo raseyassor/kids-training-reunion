@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discuter avec nous — Kids Training Réunion</title>
+  <meta name="description" content="Besoin d'aide ? Discutez directement avec l'équipe Kids Training Réunion.">
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico?v=7" id="favicon">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png?v=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png?v=7">
+  <link rel="icon" type="image/png" sizes="64x64" href="image/favicon-64x64.png?v=7">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png?v=7">
+  <link rel="manifest" href="image/site.webmanifest">
+  <meta name="theme-color" content="#FF5A3C">
+  <meta property="og:title" content="Discuter avec nous — Kids Training Réunion">
+  <meta property="og:description" content="Besoin d'aide ? Discutez directement avec l'équipe Kids Training Réunion.">
+  <meta property="og:image" content="image/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="canonical" href="https://kids-training-reunion.re/chat.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chat.css">
+  <script>
+    (function () {
+      var theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      var fav = document.getElementById('favicon');
+      if(fav) fav.href = 'image/favicon.ico?v=7';
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+        <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="index.html#nouveautes" class="nav-link">À la une</a>
+        <a href="index.html#lieux" class="nav-link">Infos / Pratique</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-menu-bg">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="menu-wave" d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="var(--coral)" />
+      </svg>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-link">Accueil</a>
+      <a href="index.html#nouveautes" class="mobile-link">À la une</a>
+      <a href="index.html#lieux" class="mobile-link">Infos / Pratique</a>
+      <a href="index.html#faq" class="mobile-link">FAQ</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="apropos.html" class="mobile-link">À propos</a>
+      <a href="chat.html" class="mobile-link mobile-link--secondary">Discuter sans quitter le site</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Support</span>
+      <h1 class="section-title">Discuter <span class="text-gradient">avec nous</span></h1>
+      <p class="section-desc" style="margin:0 auto;">Une question, un besoin d'information ? Notre équipe est là pour vous.</p>
+    </div>
+  </section>
+
+
+  <!-- CONTENT — lecture publique, admin voit config Tawk.to -->
+  <section style="padding: 0 0 var(--section-pad);">
+    <div class="container">
+      <div class="chat-placeholder" style="max-width:720px; margin: 0 auto;">
+        <div class="chat-placeholder-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+        </div>
+        <h3>Discuter avec nous</h3>
+        <p>Posez vos questions — réponse rapide par email, téléphone ou <strong>chat en direct</strong> (widget en bas à droite, utilisez-le sans vous connecter).</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:18px;">
+          <a href="index.html#contact" class="btn btn-primary"><span>Écrire un message</span></a>
+          <a href="tel:0692260280" class="btn btn-ghost"><span>Appeler 06 92 26 02 80</span></a>
+        </div>
+        <p style="margin-top:18px; font-size:0.84rem; color:var(--ink-faint);">Utilisez le widget en bas à droite pour discuter instantanément — sans inscription.</p>
+      </div>
+
+      <!-- TAWK.TO — chat en direct public -->
+      <div style="display:flex; flex-direction:column; gap:10px; max-width:720px; margin: 24px auto 0; padding:16px; background:var(--cream-alt); border:1px solid var(--border); border-radius:12px;">
+        <strong style="font-size:0.9rem;">Chat en direct — sans connexion</strong>
+        <p style="font-size:0.84rem; color:var(--ink-soft); margin:0;">Cliquez sur le widget en bas à droite pour ouvrir la discussion. Réponse rapide de l'équipe Kids Training Réunion.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+            <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+          </a>
+          <p>Des séances de sport fun et ludiques pour le bien-être et l'épanouissement de vos enfants de 3 à 17 ans.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kids_training_reunion/" class="footer-social" aria-label="Instagram"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="https://www.youtube.com/@KidsTrainingReunion" class="footer-social" aria-label="YouTube"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@kidstrainingreunion" class="footer-social" aria-label="TikTok"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg></a>
+            <a href="https://www.facebook.com/profile.php?id=100055377537172" class="footer-social" aria-label="Facebook"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Explorer</p>
+          <div class="footer-nav-compact">
+            <div class="footer-links">
+              <a href="index.html#nouveautes">Nouveauté</a>
+              <a href="index.html#concours">Jeux Concours</a>
+              <a href="index.html#activites">Activités</a>
+              <a href="index.html#lieux">Lieux</a>
+              <a href="index.html#tarifs">Tarifs</a>
+            </div>
+            <div class="footer-links footer-links--muted">
+              <a href="index.html#confiance">Pourquoi nous</a>
+              <a href="index.html#faq">FAQ</a>
+              <a href="index.html#contact">Contact</a>
+              <a href="blog.html">Blog</a>
+              <a href="chat.html">Discuter</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Nos activités</p>
+          <div class="sites-grid">
+            <a href="https://bike-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">🚲</span>
+              <span class="site-link-label"><span class="site-link-name">Bike Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://sport-anniversaire-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--coral-glow); color: var(--coral);">🎂</span>
+              <span class="site-link-label"><span class="site-link-name">Sport Anniversaire</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://boxe-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--sun-glow); color: var(--sun-dark);">🥊</span>
+              <span class="site-link-label"><span class="site-link-name">Boxe Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+            <a href="https://foot-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">⚽</span>
+              <span class="site-link-label"><span class="site-link-name">Foot Ludique</span><span class="site-link-status">Bientôt disponible</span></span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Légal</p>
+          <div class="footer-links"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Kids Training Réunion. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navToggle').classList.remove('active');
+        document.getElementById('mobileMenu').classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Kids Training Réunion</title>
+  <meta name="description" content="Kids Training Réunion — association sportive à Saint-Denis (3-17 ans). Histoire, valeurs, équipe diplômée BPJEPS, 5 lieux, 500+ enfants accompagnés.">
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico?v=7" id="favicon">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png?v=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png?v=7">
+  <link rel="icon" type="image/png" sizes="64x64" href="image/favicon-64x64.png?v=7">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png?v=7">
+  <link rel="manifest" href="image/site.webmanifest">
+  <meta name="theme-color" content="#FF5A3C">
+  <meta property="og:title" content="À propos — Kids Training Réunion">
+  <meta property="og:description" content="Kids Training Réunion — association sportive à Saint-Denis (3-17 ans). Histoire, valeurs, équipe diplômée BPJEPS, 5 lieux.">
+  <meta property="og:image" content="image/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="canonical" href="https://kids-training-reunion.re/apropos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);var f=document.getElementById('favicon'),fl=document.getElementById('favicon-light');if(f)f.href=t==='dark'?'image/favicon-light.png?v=7':'image/favicon.ico?v=7';if(fl)fl.href=t==='dark'?'image/favicon-light.png?v=7':'image/favicon.ico?v=7';})();</script>
+  <style>
+    /* APROPOS — editorial enhancement, uses existing tokens */
+    .apropos-hero{padding:110px 0 56px; background:var(--paper); border-bottom:1px solid var(--border); overflow:hidden; position:relative;}
+    .apropos-hero::before{content:''; position:absolute; top:-20%; right:-15%; width:55%; height:75%; background:radial-gradient(ellipse, var(--coral-glow) 0%, transparent 70%); opacity:.45; pointer-events:none;}
+    .apropos-hero-grid{display:grid; grid-template-columns:1.08fr .92fr; gap: clamp(32px,5vw,72px); align-items:center; position:relative; z-index:1;}
+    .apropos-hero-copy .section-tag{margin-bottom:16px;}
+    .apropos-hero-title{font-family:var(--font-display); font-size: clamp(2.4rem,4.8vw,3.6rem); font-weight:700; line-height:.95; letter-spacing:-.02em; margin-bottom:16px;}
+    .apropos-hero-title em{font-style:italic; font-weight:600; color:var(--coral);}
+    .apropos-hero-desc{color:var(--ink-soft); font-size:1.06rem; line-height:1.7; max-width:520px; margin-bottom:22px;}
+    .apropos-hero-badges{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px;}
+    .apropos-badge{display:inline-flex; align-items:center; gap:6px; font-size:.78rem; font-weight:600; padding:6px 12px; border-radius:999px; border:1.5px solid var(--border-strong); background:var(--paper);}
+    .apropos-badge--coral{background:var(--coral); color:#fff; border-color:var(--coral);}
+    .apropos-badge--teal{background:var(--teal); color:#fff; border-color:var(--teal);}
+    .apropos-hero-visual{position:relative;}
+    .apropos-hero-visual .hero-photo-frame{aspect-ratio:4/4.6; border-radius: 42% 58% 54% 46% / 46% 44% 56% 54%;}
+    .apropos-quickfacts{position:absolute; bottom:-14px; left:-14px; background:var(--paper); border:1.5px solid var(--ink); border-radius:16px; padding:14px 16px; box-shadow:6px 6px 0 var(--ink); display:flex; gap:16px;}
+    .qf{ text-align:center; min-width:62px;}
+    .qf strong{font-family:var(--font-display); font-size:1.35rem; display:block; line-height:1;}
+    .qf span{font-size:.70rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.06em; font-weight:600;}
+    .apropos-stats{padding:28px 0; background:var(--cream); border-bottom:1px solid var(--border);}
+    .apropos-stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+    .apropos-stat{background:var(--paper); border:1px solid var(--border); border-radius:16px; padding:18px 16px; text-align:center; box-shadow:var(--shadow-sm);}
+    .apropos-stat strong{font-family:var(--font-display); font-size:1.9rem; display:block; color:var(--coral);}
+    .apropos-stat span{font-size:.82rem; color:var(--ink-soft); font-weight:500;}
+    .apropos-section{padding: var(--section-pad) 0;}
+    .apropos-section--paper{background:var(--paper);}
+    .apropos-section--cream{background:var(--cream);}
+    .values-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:28px;}
+    .value-card{background:var(--paper); border:1.5px solid var(--border); border-radius:18px; padding:20px 18px; box-shadow:var(--shadow-sm); transition:transform .3s var(--ease-spring), box-shadow .3s;}
+    .value-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+    .value-icon{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; margin-bottom:12px; font-size:1.3rem;}
+    .value-card h3{font-family:var(--font-display); font-size:1.05rem; margin-bottom:6px;}
+    .value-card p{color:var(--ink-soft); font-size:.90rem; line-height:1.6;}
+    .timeline{position:relative; margin-top:26px; padding-left:28px; border-left:2.5px solid var(--border-strong);}
+    .tl-item{position:relative; padding:18px 0 18px 22px; border-bottom:1px dashed var(--border);}
+    .tl-item:last-child{border-bottom:none;}
+    .tl-item::before{content:''; position:absolute; left:-32px; top:22px; width:14px; height:14px; border-radius:50%; background:var(--coral); border:3px solid var(--paper); box-shadow:0 0 0 2px var(--coral);}
+    .tl-item:nth-child(2)::before{background:var(--teal); box-shadow:0 0 0 2px var(--teal);}
+    .tl-item:nth-child(3)::before{background:var(--sun); box-shadow:0 0 0 2px var(--sun);}
+    .tl-item:nth-child(4)::before{background:var(--ink);}
+    .tl-year{font-family:var(--font-display); font-weight:700; color:var(--coral); font-size:.85rem; letter-spacing:.06em;}
+    .tl-item h4{font-family:var(--font-display); font-size:1.12rem; margin:4px 0 6px;}
+    .tl-item p{color:var(--ink-soft); font-size:.92rem; line-height:1.65; max-width:640px;}
+    .team-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px;}
+    .team-card{background:var(--paper); border:1.5px solid var(--border); border-radius:18px; overflow:hidden; box-shadow:var(--shadow-sm);}
+    .team-photo{aspect-ratio:4/3; overflow:hidden; background:var(--cream-alt);}
+    .team-photo img{width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease-out-expo);}
+    .team-card:hover .team-photo img{transform:scale(1.05);}
+    .team-body{padding:16px 16px 18px;}
+    .team-body h4{font-family:var(--font-display); font-size:1.02rem; margin-bottom:2px;}
+    .team-role{font-size:.78rem; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px; display:block;}
+    .team-body p{font-size:.86rem; color:var(--ink-soft); line-height:1.6;}
+    .apropos-cta{background:var(--ink); color:var(--cream); border-radius:24px; padding:32px; display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; box-shadow:var(--shadow-lg);}
+    .apropos-cta h3{font-family:var(--font-display); font-size:1.7rem; line-height:1.15; margin-bottom:8px;}
+    .apropos-cta p{color:rgba(251,245,236,.75); line-height:1.6; margin-bottom:16px;}
+    .hex-honeycomb{position:relative; width:250px; height:168px; margin:0 auto;}
+    .hexagon{position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background-size:cover; background-position:center; filter:none; border:1.5px solid var(--ink);}
+    .hexagon:hover{filter:brightness(1.08); transform:translate(var(--tx), var(--ty)) scale(1.06) !important; z-index:5;}
+    @media(max-width:1080px){
+      .apropos-hero-grid{grid-template-columns:1fr;}
+      .apropos-hero-visual{max-width:520px; margin:0 auto;}
+      .values-grid{grid-template-columns:repeat(2,1fr);}
+      .team-grid{grid-template-columns:repeat(2,1fr);}
+      .apropos-stats-grid{grid-template-columns:repeat(2,1fr);}
+      .apropos-cta{grid-template-columns:1fr;}
+      .hex-lieux{gap:8px;}
+      .hex-card{aspect-ratio:.88;}
+    }
+    @media(max-width:640px){
+      .values-grid{grid-template-columns:1fr;}
+      .team-grid{grid-template-columns:1fr;}
+      .apropos-quickfacts{position:static; margin-top:14px; box-shadow:4px 4px 0 var(--ink);}
+      .apropos-lieux-mini{grid-template-columns:repeat(4,1fr); gap:6px;}
+      .hex-card{grid-column:span 2 !important; margin-top:0 !important; aspect-ratio:1;}
+      .hex-card:nth-child(5){grid-column:2 / span 2 !important;}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+        <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="index.html#nouveautes" class="nav-link">À la une</a>
+        <a href="index.html#lieux" class="nav-link">Infos / Pratique</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-menu-bg">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none"><path class="menu-wave" d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="var(--coral)" /></svg>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-link">Accueil</a>
+      <a href="index.html#nouveautes" class="mobile-link">À la une</a>
+      <a href="index.html#lieux" class="mobile-link">Infos / Pratique</a>
+      <a href="index.html#faq" class="mobile-link">FAQ</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="apropos.html" class="mobile-link">À propos</a>
+      <a href="chat.html" class="mobile-link mobile-link--secondary">Discuter sans quitter le site</a>
+    </div>
+  </div>
+
+  <!-- HERO EDITORIAL -->
+  <section class="apropos-hero">
+    <div class="container">
+      <div class="apropos-hero-grid">
+        <div class="apropos-hero-copy">
+          <span class="section-tag reveal" style="background:var(--ink); color:var(--cream);">Association W9R1010112 • Depuis 2022</span>
+          <h1 class="apropos-hero-title reveal">Kids Training Réunion, <em>une aventure collective.</em></h1>
+          <p class="apropos-hero-desc reveal">On fait bouger les 3–17 ans à Saint-Denis avec exigence et fun. Petits groupes, coachs diplômés, 5 lieux proches de chez vous — inscription toute l'année.</p>
+          <div class="apropos-hero-badges reveal">
+            <span class="apropos-badge apropos-badge--coral">35 chem. Père Raimbault, La Montagne 97417</span>
+            <span class="apropos-badge">RNA W9R1010112</span>
+            <span class="apropos-badge apropos-badge--teal">BPJEPS • PSC1</span>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;" class="reveal">
+            <a href="index.html#contact" class="btn btn-primary"><span>Réserver une séance</span></a>
+            <a href="https://www.instagram.com/kids_training_reunion/" target="_blank" rel="noopener" class="btn btn-ghost"><span>Voir Instagram</span></a>
+          </div>
+        </div>
+        <div class="apropos-hero-visual reveal">
+          <div class="hero-photo-frame">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80" alt="Enfants qui courent ensemble" loading="eager">
+          </div>
+          <div class="hero-sticker" style="top:4%; left:-4%;">Dès 12 mois*</div>
+          <div class="apropos-quickfacts">
+            <div class="qf"><strong>500+</strong><span>enfants</span></div>
+            <div class="qf" style="border-left:1px solid var(--border); padding-left:16px;"><strong>5</strong><span>lieux</span></div>
+            <div class="qf" style="border-left:1px solid var(--border); padding-left:16px;"><strong>15+</strong><span>ans d'xp</span></div>
+            <div class="qf" style="border-left:1px solid var(--border); padding-left:16px;"><strong>10</strong><span>max/groupe</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="apropos-stats">
+    <div class="container">
+      <div class="apropos-stats-grid">
+        <div class="apropos-stat reveal"><strong>3–17 ans</strong><span>+ pilote 12–36 mois avec parent</span></div>
+        <div class="apropos-stat reveal" style="transition-delay:.06s"><strong>5 lieux</strong><span>Sainte-Clotilde • Bellepierre • Montagne • Trinité • Centre-ville</span></div>
+        <div class="apropos-stat reveal" style="transition-delay:.12s"><strong>Sans engagement</strong><span>Séance découverte 6€ • <br>Carte Sésame -15%</span></div>
+        <div class="apropos-stat reveal" style="transition-delay:.18s"><strong>Matériel fourni</strong><span>Tenue de sport suffit • Serviette</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL — rempli via JS pour respecter 'page à part via JS' -->
+  <section style="padding:0; background:var(--paper);">
+    <div class="container">
+      <div id="aproposMount"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo"><img class="logo-img" src="image/logo.png" alt="" width="42" height="42"><span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span></a><p>Séances fun 3–17 ans. 5 lieux à Saint-Denis, inscription toute l'année.</p><div class="footer-socials"><a href="https://www.instagram.com/kids_training_reunion/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://www.facebook.com/profile.php?id=100055377537172" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a></div></div><div><p class="footer-title">Explorer</p><div class="footer-nav-compact"><div class="footer-links"><a href="index.html#activites">Activités</a><a href="index.html#lieux">Lieux</a><a href="blog.html">Blog</a><a href="apropos.html">À propos</a></div><div class="footer-links footer-links--muted"><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a><a href="chat.html">Discuter</a></div></div></div><div><p class="footer-title">Légal</p><div class="footer-links"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div></div></div><div class="footer-bottom"><p class="footer-copyright">© 2026 Kids Training Réunion. RNA W9R1010112 • 35 chem. Père Raimbault 97417</p></div></div></footer>
+
+  <script src="app.js"></script>
+  <script>
+  // apropos.html — page à part, remplie 100% via JavaScript
+  document.addEventListener("DOMContentLoaded", () => {
+    const mount = document.getElementById("aproposMount");
+    if (!mount) return;
+
+    mount.innerHTML = `
+      <!-- VALEURS -->
+      <section class="apropos-section apropos-section--cream">
+        <div class="section-header reveal" style="margin:0 auto 10px; text-align:center;">
+          <span class="section-tag">Nos valeurs</span>
+          <h2 class="section-title" style="font-size:clamp(1.9rem,3.5vw,2.6rem);">Le plaisir d'abord, <span class="text-gradient">le progrès ensuite</span></h2>
+          <p class="section-desc" style="margin:0 auto;">Pas de pression, pas de comparaison — chaque enfant avance à son rythme, avec un coach qui l'encourage par son prénom.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="value-icon" style="background:var(--coral-glow); color:var(--coral);">♥</div>
+            <h3>Plaisir d'abord</h3>
+            <p>On apprend en jouant. Parcours, relais, mini-défis — sourire garanti à la sortie.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:.06s">
+            <div class="value-icon" style="background:var(--teal-glow); color:var(--teal);">🛡</div>
+            <h3>Sécurité</h3>
+            <p>Salles agréées, plein air sécurisé, intensité adaptée, matériel fourni et contrôlé.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:.12s">
+            <div class="value-icon" style="background:var(--sun-glow); color:var(--ink);">★</div>
+            <h3>Confiance</h3>
+            <p>Groupes de 10–12 max. Suivi individuel, encouragements, fierté visible.</p>
+          </div>
+          <div class="value-card reveal" style="transition-delay:.18s">
+            <div class="value-icon" style="background:var(--cream-alt); border:1px solid var(--border-strong);">◉</div>
+            <h3>Proximité</h3>
+            <p>5 lieux à Saint-Denis. Proche centre-ville, Bellepierre, Ste-Clotilde, Montagne, Trinité.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HISTOIRE -->
+      <section class="apropos-section apropos-section--paper">
+        <div style="display:grid; grid-template-columns:1.05fr .95fr; gap: clamp(24px,4vw,56px); align-items:start;">
+          <div class="reveal">
+            <span class="section-tag">Notre histoire</span>
+            <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.3rem);">De La Montagne à <span class="text-gradient--teal">tout Saint-Denis</span></h2>
+            <p style="color:var(--ink-soft); line-height:1.7; margin-top:10px;">Association loi 1901 déclarée en préfecture, née d'une envie simple : que chaque enfant trouve un endroit où bouger sans jugement, prendre confiance et se faire des copains. <em style="font-size:.82rem; color:var(--ink-faint);">(Timeline limitée aux infos vérifiées — à compléter si besoin)</em></p>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-year">16 août 2022 — Vérifié</div>
+                <h4>Création • 35 chem. Père Raimbault, La Montagne 97417</h4>
+                <p>Déclaration en préfecture RNA <strong>W9R1010112</strong> (source : assoce.fr / net1901.org). Activité : sport ludique 3–17 ans. <span style="color:var(--ink-faint); font-size:.80rem;">— Publication JO : 13 sept. 2022</span></p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Aujourd'hui — 5 lieux à Saint-Denis</div>
+                <h4>Bellepierre (51 bd Gastonville) • Ste-Clotilde • Montagne • Trinité • Centre-ville</h4>
+                <p>En salle ou plein air selon lieu. Partenariat <strong>Carte Sésame -15%</strong>, groupes 10–12 max, matériel fourni.</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Aujourd'hui — Expertise terrain</div>
+                <h4>15+ ans cumulés • 500+ enfants accompagnés</h4>
+                <p>Équipe BPJEPS, carte d'éducateur, honorabilité L212-9, PSC1 à jour. Séance découverte 6€, inscription toute l'année. <span style="color:var(--ink-faint); font-size:.80rem;">Chiffres issus du site actuel — à confirmer</span></p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">Pilote 2026 — Nouveauté</div>
+                <h4>Dès 12 mois avec parent</h4>
+                <p>Éveil 12–24 mois et 2–3 ans à Bellepierre / Centre-ville / Trinité. Groupe 8 max, avec parent présent. <span style="color:var(--ink-faint); font-size:.80rem;">— Annonce “À la une” du site</span></p>
+              </div>
+            </div>
+            <p style="margin-top:14px; font-size:.78rem; color:var(--ink-faint); line-height:1.5; background:var(--cream); border:1px dashed var(--border); border-radius:10px; padding:10px 12px;">🔍 <strong>Instagram</strong> <code>@kids_training_reunion</code> & <strong>Facebook</strong> <code>100055377537172</code> : dates de création non publiques via recherche. Vérifiez dans <em>Facebook → Transparence de la Page → Date de création</em> et <em>Instagram → À propos du compte</em> pour être précis. Dites-moi les dates et je les intègre.</p>
+          </div>
+          <div class="reveal" style="transition-delay:.10s; position:sticky; top:88px;">
+            <div style="background:var(--cream); border:1.5px solid var(--border); border-radius:18px; padding:20px; box-shadow:var(--shadow);">
+              <h4 style="font-family:var(--font-display); font-size:1.08rem; margin-bottom:10px; display:flex; align-items:center; gap:8px;"><span style="width:28px; height:28px; border-radius:50%; background:var(--coral); color:#fff; display:grid; place-items:center; font-size:.85rem;">✓</span> Cadre légal & sécurité</h4>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; color:var(--ink-soft); font-size:.88rem; line-height:1.6;">
+                <li>• <strong style="color:var(--ink);">BPJEPS</strong> + carte d'éducateur + honorabilité L212-9 + PSC1 à jour.</li>
+                <li>• <strong style="color:var(--ink);">Groupes 10–12</strong> (8 pour 12–36 mois) — ratios par âge.</li>
+                <li>• <strong style="color:var(--ink);">Assurance RC</strong> asso + individuelle accident conseillée.</li>
+                <li>• <strong style="color:var(--ink);">Droit à l'image</strong> mineur : autorisation écrite obligatoire (art.9 + RGPD).</li>
+                <li>• <strong style="color:var(--ink);">Matériel</strong> fourni, conforme, adapté.</li>
+              </ul>
+              <div style="margin-top:14px; padding-top:12px; border-top:1px dashed var(--border); font-size:.78rem; color:var(--ink-faint);">
+                RNA W9R1010112 • SIRET sur demande • TVA non applicable art.261 CGI • <a href="mentions-legales.html" style="color:var(--coral);">Mentions légales</a>
+              </div>
+            </div>
+            <div style="margin-top:16px; background:var(--ink); color:var(--cream); border-radius:16px; padding:16px; display:flex; gap:12px; align-items:center;">
+              <div style="width:42px; height:42px; border-radius:50%; background:var(--sun); color:var(--ink); display:grid; place-items:center; flex-shrink:0;">☎</div>
+              <div>
+                <div style="font-weight:700; font-size:.92rem;">Une question ? On répond vite</div>
+                <div style="font-size:.84rem; opacity:.75;">0692 26 02 80 • contact@kids-training-reunion.re</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EQUIPE -->
+      <section class="apropos-section apropos-section--cream">
+        <div class="section-header reveal" style="margin:0 auto 6px; text-align:center;">
+          <span class="section-tag section-tag--teal">L'équipe</span>
+          <h2 class="section-title">Des coachs <span class="text-gradient--teal">diplômés & passionnés</span></h2>
+          <p class="section-desc" style="margin:0 auto;">BPJEPS, passion transmission, attentifs à chaque prénom. Vérification honorabilité et PSC1 à jour.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-photo"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=700&q=80" alt="Coach" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=80'"></div>
+            <div class="team-body"><span class="team-role">Coordinateur • BPJEPS</span><h4>Équipe Kids Training</h4><p>Motricité, coordination, confiance. Parcours, cerceaux, jeux coopératifs.</p></div>
+          </div>
+          <div class="team-card reveal" style="transition-delay:.06s">
+            <div class="team-photo"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80" alt="Coach boxe" loading="lazy"></div>
+            <div class="team-body"><span class="team-role">Boxe Ludique • Sans contact</span><h4>Coach Boxe</h4><p>Techniques sécurisées, discipline douce, gestion des émotions.</p></div>
+          </div>
+          <div class="team-card reveal" style="transition-delay:.12s">
+            <div class="team-photo"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Équipe" loading="lazy"></div>
+            <div class="team-body"><span class="team-role">Accueil • Familles</span><h4>Référente parents</h4><p>Inscriptions toute l'année, séance découverte 6€, Carte Sésame.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIEUX + CTA -->
+      <section class="apropos-section apropos-section--paper" style="padding-bottom: var(--section-pad);">
+        <div class="apropos-cta reveal">
+          <div>
+            <h3>Prêt à faire bouger votre enfant ?</h3>
+            <p>5 lieux, 3–17 ans (et dès 12 mois avec parent en pilote). Séance découverte 6€ — venez tester sans engagement.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a href="index.html#contact" class="btn btn-primary"><span>Réserver une séance</span></a>
+              <a href="index.html#lieux" class="btn btn-ghost" style="background:var(--paper); color:var(--ink);"><span>Voir les 5 lieux</span></a>
+            </div>
+          </div>
+          <div class="hex-honeycomb" style="position:relative; width:250px; height:168px; margin:0 auto;">
+            <div class="hexagon" style="position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('https://images.unsplash.com/photo-1701272873248-ee041b51b02b?auto=format&fit=crop&w=400&q=80') center/cover; --tx:0px; --ty:0px; transform:translate(var(--tx), var(--ty)) scale(1); z-index:1; filter:none;"></div>
+            <div class="hexagon" style="position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('https://images.unsplash.com/photo-1648924413770-9c650ee3c033?auto=format&fit=crop&w=400&q=80') center/cover; --tx:82px; --ty:0px; transform:translate(var(--tx), var(--ty)) scale(1); z-index:1; filter:none;"></div>
+            <div class="hexagon" style="position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('https://images.unsplash.com/photo-1727926219091-0577bc9d3df6?auto=format&fit=crop&w=400&q=80') center/cover; --tx:164px; --ty:0px; transform:translate(var(--tx), var(--ty)) scale(1); z-index:1; filter:none;"></div>
+            <div class="hexagon" style="position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('https://images.unsplash.com/photo-1685549265490-29908af7486a?auto=format&fit=crop&w=400&q=80') center/cover; --tx:41px; --ty:71px; transform:translate(var(--tx), var(--ty)) scale(1); z-index:2; filter:none;"></div>
+            <div class="hexagon" style="position:absolute; clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); cursor:pointer; transition:transform 0.25s, filter 0.25s; display:flex; align-items:center; justify-content:center; user-select:none; width:80px; height:92.4px; background:linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)), url('https://images.unsplash.com/photo-1641352848874-c96659e03144?auto=format&fit=crop&w=400&q=80') center/cover; --tx:123px; --ty:71px; transform:translate(var(--tx), var(--ty)) scale(1); z-index:2; filter:none;"></div>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // active reveal via app.js observer + fallback visible
+    requestAnimationFrame(()=>{
+      mount.querySelectorAll(".reveal").forEach((el,i)=>{
+        setTimeout(()=> el.classList.add("visible"), i*40);
+        // aussi observer si present
+        if(window.IntersectionObserver){
+          // deja géré par app.js, mais force
+          el.style.opacity=""; el.style.transform="";
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>

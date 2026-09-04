@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Training Réunion — Sport & Fun pour vos enfants</title>
+  <meta name="description"
+    content="Kids Training et Boxe Ludique à Saint-Denis : des séances de sport encadrées et ludiques pour enfants de 3 à 17 ans, dans 5 lieux de La Réunion.">
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico?v=7" id="favicon">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png?v=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png?v=7">
+  <link rel="icon" type="image/png" sizes="64x64" href="image/favicon-64x64.png?v=7">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png?v=7">
+  <link rel="manifest" href="image/site.webmanifest">
+  <meta name="theme-color" content="#FF5A3C">
+  <meta property="og:title" content="Kids Training Réunion — Sport & Fun pour vos enfants">
+  <meta property="og:description" content="Kids Training et Boxe Ludique à Saint-Denis : séances ludiques 3–17 ans, 5 lieux, encadrement diplômé. Inscription toute l'année.">
+  <meta property="og:image" content="image/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kids-training-reunion.re/index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Kids Training Réunion",
+    "description": "Séances de sport ludiques pour enfants 3–17 ans à Saint-Denis, La Réunion — 5 lieux, encadrement diplômé BPJEPS.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "35 chemin du Père Raimbault, La Montagne",
+      "addressLocality": "Saint-Denis",
+      "postalCode": "97417",
+      "addressRegion": "La Réunion",
+      "addressCountry": "FR"
+    },
+    "telephone": "+262692260280",
+    "email": "contact@kids-training-reunion.re",
+    "url": "https://kids-training-reunion.re/",
+    "priceRange": "6€ - 40€",
+    "openingHours": "Mo-Sa",
+    "sameAs": [
+      "https://www.instagram.com/kids_training_reunion/",
+      "https://www.facebook.com/profile.php?id=100055377537172"
+    ]
+  }
+  </script>
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      var fav = document.getElementById('favicon');
+      if(fav) fav.href = 'image/favicon.ico?v=7';
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="20" stroke="var(--coral)" stroke-width="3" opacity="0.20" />
+        <circle cx="24" cy="24" r="20" stroke="var(--coral)" stroke-width="3" stroke-dasharray="120" stroke-dashoffset="120" stroke-linecap="round" />
+      </svg>
+      <div class="preloader-text">Kids Training<span> Réunion</span></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert">
+    <span id="toastIcon">✓</span>
+    <span id="toastMessage">Message envoyé !</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+        <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="index.html#nouveautes" class="nav-link">À la une</a>
+        <a href="index.html#lieux" class="nav-link">Infos / Pratique</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-menu-bg">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="menu-wave" d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="var(--coral)" />
+      </svg>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-link">Accueil</a>
+      <a href="index.html#nouveautes" class="mobile-link">À la une</a>
+      <a href="index.html#lieux" class="mobile-link">Infos / Pratique</a>
+      <a href="index.html#faq" class="mobile-link">FAQ</a>
+      <a href="blog.html" class="mobile-link">Blog</a>
+      <a href="apropos.html" class="mobile-link">À propos</a>
+      <a href="chat.html" class="mobile-link mobile-link--secondary">Discuter sans quitter le site</a>
+    </div>
+  </div>
+
+  <!-- PROMO -->
+  <div class="promo-banner" id="promo">
+    <div class="promo-content">
+      <div class="promo-icon"><svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2l4.5 9.5L30 13l-7.5 7.5L24 30 16 25 8 30l1.5-9.5L2 13l9.5-1.5L16 2z" fill="currentColor" />
+        </svg></div>
+      <div class="promo-text"><strong>Inscription possible toute l'année</strong></div>
+      <a href="#contact" class="promo-link">Réserver <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg></a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2l2.5 5.5L18 8.5l-7.5 7.5L12 30 10 25 8 30l1.5-9.5L2 13l5.5-1.5L10 2z" fill="currentColor" />
+          </svg>
+          <span>3 à 17 ans · Saint-Denis, La Réunion</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-line">Le sport,</span>
+          <span class="hero-line hero-line-accent">en s'amusant.</span>
+        </h1>
+        <p class="hero-desc">Kids Training et Boxe Ludique aident vos enfants à bouger, progresser et prendre confiance
+          — encadrés par des professionnels, dans 5 lieux à Saint-Denis.</p>
+        <div class="hero-discuss-hint">
+          <span class="hero-discuss-icon">💬</span>
+          <span class="hero-discuss-text"><strong>Discutez sans quitter le site</strong> — utilisez le widget en bas à droite pour nous parler instantanément.</span>
+        </div>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-primary btn-lg"><span>Réserver une séance</span></a>
+          <a href="#activites" class="btn btn-ghost btn-lg"><span>Découvrir les activités</span></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><span class="stat-number" data-target="5">0</span><span class="stat-label">Lieux
+              à<br>Saint-Denis</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number" data-target="15">0</span><span
+              class="stat-suffix">+</span><span class="stat-label">Années<br>d'expérience</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number" data-target="500">0</span><span
+              class="stat-suffix">+</span><span class="stat-label">Enfants<br>accompagnés</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-frame">
+          <img class="hero-photo"
+            src="https://images.unsplash.com/photo-1524603642524-b02ea114f009?auto=format&fit=crop&w=1200&q=80"
+            alt="Deux enfants courent et rient en plein air" loading="eager">
+        </div>
+        <div class="hero-sticker">Dès 3 ans</div>
+        <div class="hero-float-card">
+          <div class="hero-float-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                fill="currentColor" />
+            </svg></div>
+          <div><strong>Encadrement diplômé</strong>
+            <p>Coachs formés &amp; passionnés</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Défiler</span>
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+          <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+  </section>
+
+  <!-- ÉCRAN 1 — ACTIVITÉ + À LA UNE ENSEMBLE (même écran) -->
+  <section class="first-screen" id="activites" aria-labelledby="activites-title">
+    <div class="container">
+      <div class="first-screen-grid">
+        <!-- COLONNE GAUCHE — ACTIVITÉS EN PREMIER -->
+        <div class="first-screen-main">
+          <div class="section-header section-header--left reveal">
+            <span class="section-tag">Nos Activités</span>
+            <h2 class="section-title" id="activites-title">Le sport, <span class="text-gradient">en s'amusant</span></h2>
+            <p class="section-desc">Deux activités ludiques & dynamiques — inscription toute l'année.</p>
+          </div>
+
+          <div class="activity-row activity-row--compact reveal">
+            <div class="activity-media">
+              <img src="https://images.unsplash.com/photo-1451481454041-104482d8e284?auto=format&fit=crop&w=800&q=80" alt="Trois enfants courent dans un champ, pleins d'énergie" loading="lazy">
+            </div>
+            <div class="activity-copy">
+              <div class="activity-badge">Activité 1</div>
+              <h3>Kids Training</h3>
+              <p class="activity-desc">Motricité, confiance et goût de l'effort — en s'amusant.</p>
+              <div class="age-groups age-groups--compact">
+                <div class="age-group"><div class="age-badge">3–5 ans</div><div><strong>Éveil moteur</strong><p>Parcours, cerceaux, mini-challenges.</p></div></div>
+                <div class="age-group"><div class="age-badge">6–8 ans</div><div><strong>Initiation</strong><p>Ballon, obstacles, fair-play.</p></div></div>
+                <div class="age-group"><div class="age-badge">9–12 ans</div><div><strong>Renforcement</strong><p>Cardio kids, relais, stratégie.</p></div></div>
+              </div>
+              <div class="activity-tags"><span class="tag">Motricité</span><span class="tag">Coordination</span><span class="tag">Confiance</span></div>
+            </div>
+          </div>
+
+          <div class="activity-row activity-row--compact activity-row--reverse reveal reveal-delay-1">
+            <div class="activity-media activity-media--teal">
+              <img src="https://images.unsplash.com/photo-1641023737468-367e606961c7?auto=format&fit=crop&w=800&q=80" alt="Jeune fille souriante avec des gants de boxe rouges" loading="lazy">
+            </div>
+            <div class="activity-copy">
+              <div class="activity-badge activity-badge--teal">Activité 2</div>
+              <h3>Boxe Ludique</h3>
+              <p class="activity-desc">Boxe sans contact — confiance, coordination, discipline.</p>
+              <div class="boxe-features boxe-features--compact">
+                <div class="boxe-feature"><div class="boxe-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg></div><div><strong>Techniques</strong><p>Bases sécurisées.</p></div></div>
+                <div class="boxe-feature"><div class="boxe-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg></div><div><strong>Ludique</strong><p>Jeux adaptés à l'âge.</p></div></div>
+                <div class="boxe-feature"><div class="boxe-feature-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/></svg></div><div><strong>Encadrement pro</strong><p>Coachs diplômés.</p></div></div>
+              </div>
+              <div class="activity-tags"><span class="tag">Coordination</span><span class="tag">Discipline</span><span class="tag">Émotions</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLONNE DROITE — À LA UNE (ads) collée au même écran -->
+        <aside class="first-screen-side" aria-labelledby="pilot-ads-title">
+          <div class="ads-header ads-header--side reveal">
+            <span class="ads-kicker"><span class="ads-dot"></span> À la une — Pilote</span>
+            <span class="ads-header-hint">Annonces • 2</span>
+          </div>
+          <h2 class="ads-title ads-title--side reveal" id="pilot-ads-title">Nouveauté <span>&</span> Concours</h2>
+
+          <div class="ads-stack">
+            <article id="nouveautes" class="ad-card ad-card--nouveau reveal">
+              <div class="ad-media">
+                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=600&q=80" alt="Bébé joyeux en activité sportive" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80'">
+                <div class="ad-media-top">
+                  <span class="ad-badge ad-badge--teal">Nouveau</span>
+                  <span class="ad-label">Annonce</span>
+                </div>
+              </div>
+              <div class="ad-body">
+                <h3 class="ad-title">Dès <span>12 mois</span> — avec parent</h3>
+                <p class="ad-desc">Pilote doux & sécurisé. 12–24 m. & 2–3 ans.</p>
+                <div class="ad-meta">
+                  <span class="location-tag">Bellepierre</span>
+                  <span class="location-tag">Trinité</span>
+                </div>
+                <div class="ad-cta">
+                  <a href="#contact" class="btn btn-primary btn-sm"><span>Réserver</span></a>
+                  <a href="#activites" class="ad-link">En savoir +</a>
+                </div>
+              </div>
+            </article>
+
+            <article id="concours" class="ad-card ad-card--concours reveal reveal-delay-1">
+              <div class="ad-media">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" alt="Enfants qui s'entraînent avec enthousiasme" loading="lazy">
+                <div class="ad-media-top">
+                  <span class="ad-badge ad-badge--sun">Concours</span>
+                  <span class="ad-label">Annonce</span>
+                </div>
+                <div class="ad-prize">
+                  <span class="ad-prize-num">5</span>
+                  <span class="ad-prize-label">1 mois offert</span>
+                </div>
+              </div>
+              <div class="ad-body">
+                <h3 class="ad-title">Gagnez <span>1 mois !</span></h3>
+                <p class="ad-desc">Tirage 5 sept. • 1–17 ans • 30 sec</p>
+                <div class="ad-steps">
+                  <span class="ad-step"><em>1</em> Suivre</span>
+                  <span class="ad-step"><em>2</em> Taguer</span>
+                  <span class="ad-step"><em>3</em> Partager</span>
+                </div>
+                <div class="ad-cta">
+                  <a href="https://www.instagram.com/kids_training_reunion/" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn--sun"><span>Participer</span></a>
+                  <a href="#contact" class="ad-link">Question ?</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS / CONFIANCE PARENTS -->
+  <section class="trust" id="confiance" aria-labelledby="confiance-title">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-intro reveal">
+          <span class="section-tag">Pour les parents</span>
+          <h2 class="section-title" id="confiance-title">Ce qui rassure <span class="text-gradient">les familles</span></h2>
+          <p class="section-desc">On sait ce qui compte quand on confie son enfant : un cadre sûr, une vraie attention,
+            et du plaisir visible sur son visage en sortant.</p>
+        </div>
+        <div class="trust-list">
+          <div class="trust-item reveal reveal-delay-1">
+            <span class="trust-num">01</span>
+            <div>
+              <h3>Encadrants diplômés</h3>
+              <p>Des coachs formés et passionnés, attentifs à chaque enfant du groupe.</p>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-delay-2">
+            <span class="trust-num">02</span>
+            <div>
+              <h3>Petits groupes</h3>
+              <p>10 à 12 enfants maximum, pour un vrai suivi individuel et des progrès visibles.</p>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-delay-3">
+            <span class="trust-num">03</span>
+            <div>
+              <h3>Sécurité avant tout</h3>
+              <p>Matériel fourni, activités et intensité adaptées à chaque tranche d'âge.</p>
+            </div>
+          </div>
+          <div class="trust-item reveal reveal-delay-4">
+            <span class="trust-num">04</span>
+            <div>
+              <h3>Sans engagement</h3>
+              <p>Une séance découverte à 6€ pour tester, avant toute inscription.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIEUX -->
+  <section class="locations" id="lieux" aria-labelledby="lieux-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag section-tag--teal">Nos Lieux</span>
+        <h2 class="section-title" id="lieux-title">5 lieux à <span class="text-gradient--teal">Saint-Denis</span></h2>
+        <p class="section-desc">Salle ou plein air, chaque lieu est choisi pour garantir sécurité, confort… et fun !</p>
+      </div>
+      <div class="locations-grid">
+        <div class="location-card reveal reveal-delay-1">
+          <div class="location-photo"><img
+              src="https://images.unsplash.com/photo-1701272873248-ee041b51b02b?auto=format&fit=crop&w=800&q=80"
+              alt="Grande salle de sport au parquet clair" loading="lazy"><span class="location-number">01</span></div>
+          <div class="location-content">
+            <h3>Bellepierre</h3>
+            <p>Espace en salle, idéal pour les activités de motricité, les parcours et les jeux en petit groupe.</p>
+            <div class="location-meta"><span class="location-tag">En salle</span><span class="location-age">Dès 3
+                ans</span></div>
+          </div>
+        </div>
+        <div class="location-card reveal reveal-delay-2">
+          <div class="location-photo"><img
+              src="https://images.unsplash.com/photo-1648924413770-9c650ee3c033?auto=format&fit=crop&w=800&q=80"
+              alt="Salle de sport avec panier de basket" loading="lazy"><span class="location-number">02</span></div>
+          <div class="location-content">
+            <h3>Sainte-Clotilde</h3>
+            <p>Cadre calme et lumineux pour les petits groupes. Jeux d'équilibre, relais et coordination.</p>
+            <div class="location-meta"><span class="location-tag">En salle</span><span class="location-age">Tous
+                niveaux</span></div>
+          </div>
+        </div>
+        <div class="location-card reveal reveal-delay-3">
+          <div class="location-photo"><img
+              src="https://images.unsplash.com/photo-1641352848874-c96659e03144?auto=format&fit=crop&w=800&q=80"
+              alt="Terrain de sport intérieur coloré" loading="lazy"><span class="location-number">03</span></div>
+          <div class="location-content">
+            <h3>Proche centre-ville</h3>
+            <p>Un cadre calme et lumineux, idéal pour les petits groupes. Jeux d'équilibre, relais et coordination sont au cœur des séances.</p>
+            <div class="location-meta"><span class="location-tag">En salle</span><span class="location-age">Tous
+                niveaux</span></div>
+          </div>
+        </div>
+        <div class="location-card reveal reveal-delay-4">
+          <div class="location-photo"><img
+              src="https://images.unsplash.com/photo-1685549265490-29908af7486a?auto=format&fit=crop&w=800&q=80"
+              alt="Enfants qui jouent en plein air dans un parc" loading="lazy"><span class="location-number">04</span>
+          </div>
+          <div class="location-content">
+            <h3>Parc de la Trinité</h3>
+            <p>Grand espace en plein air pour courir, sauter, jouer et s'amuser librement.</p>
+            <div class="location-meta"><span class="location-tag tag-outdoor">Plein air</span><span
+                class="location-age">Tous niveaux</span></div>
+          </div>
+        </div>
+        <div class="location-card reveal reveal-delay-5">
+          <div class="location-photo"><img
+              src="https://images.unsplash.com/photo-1727926219091-0577bc9d3df6?auto=format&fit=crop&w=800&q=80"
+              alt="Enfants dans un cadre naturel verdoyant" loading="lazy"><span class="location-number">05</span></div>
+          <div class="location-content">
+            <h3>La Montagne</h3>
+            <p>Cadre naturel exceptionnel pour des séances en plein air, au cœur d'un environnement verdoyant.</p>
+            <div class="location-meta"><span class="location-tag tag-outdoor">Plein air</span><span
+                class="location-age">Tous niveaux</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="pricing" id="tarifs" aria-labelledby="tarifs-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nos Offres</span>
+        <h2 class="section-title" id="tarifs-title">Des tarifs <span class="text-gradient">accessibles &amp; flexibles</span></h2>
+        <p class="section-desc">Sans engagement, pour permettre à chaque famille de trouver son rythme.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="pricing-header">
+            <h3>12 mois</h3>
+            <div class="pricing-price"><span class="price">25€</span><span class="price-period">/mois</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Meilleur tarif mensuel</span></div>
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Tous les lieux &amp; activités</span></div>
+          </div><a href="#contact" class="btn btn-outline btn-full">Choisir</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-2">
+          <div class="pricing-header">
+            <h3>6 mois</h3>
+            <div class="pricing-price"><span class="price">30€</span><span class="price-period">/mois</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Tous les lieux &amp; activités</span></div>
+          </div><a href="#contact" class="btn btn-outline btn-full">Choisir</a>
+        </div>
+        <div class="pricing-card pricing-popular reveal reveal-delay-3">
+          <div class="popular-badge">Le plus populaire</div>
+          <div class="pricing-header">
+            <h3>3 mois</h3>
+            <div class="pricing-price"><span class="price">35€</span><span class="price-period">/mois</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Tous les lieux &amp; activités</span></div>
+          </div><a href="#contact" class="btn btn-primary btn-full">Choisir</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-4">
+          <div class="pricing-header">
+            <h3>1 mois</h3>
+            <div class="pricing-price"><span class="price">40€</span><span class="price-period">/mois</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Sans engagement</span></div>
+          </div><a href="#contact" class="btn btn-outline btn-full">Choisir</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-5">
+          <div class="pricing-header">
+            <h3>1 séance</h3>
+            <div class="pricing-price"><span class="price">12€</span><span class="price-period">/séance</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Ponctuel, sans engagement</span></div>
+          </div><a href="#contact" class="btn btn-outline btn-full">Choisir</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-5">
+          <div class="pricing-header">
+            <h3>Découverte</h3>
+            <div class="pricing-price"><span class="price">6€</span><span class="price-period">/séance</span></div>
+          </div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg><span>Pour essayer !</span></div>
+          </div><a href="#contact" class="btn btn-outline btn-full">Réserver</a>
+        </div>
+      </div>
+      <div class="pricing-partners reveal">
+        <p class="partners-title">Carte Sésame</p>
+        <div class="partners-grid">
+          <div class="partner-item"><span class="partner-discount">-15%</span><span class="partner-name">Remise pour les
+              titulaires de la carte Sésame</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="faq-header reveal">
+          <span class="section-tag section-tag--teal">FAQ</span>
+          <h2 class="section-title" id="faq-title">Questions <span class="text-gradient--teal">fréquentes</span></h2>
+          <p class="section-desc">Tout ce que vous devez savoir avant d'inscrire votre enfant.</p>
+          <a href="#contact" class="btn btn-primary"><span>Nous contacter</span></a>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal"><button class="faq-question" type="button"><span>À partir de quel âge peut-on inscrire
+                un enfant ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Les activités sont ouvertes dès 3 ans, avec des groupes adaptés : 3–5 ans (éveil moteur), 6–8 ans
+                (initiation sportive), 9–12 ans (renforcement ludique). La boxe ludique est également accessible dès 3
+                ans.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1"><button class="faq-question" type="button"><span>Mon enfant n'est pas très sportif,
+                peut-il participer ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Absolument ! Nos séances s'adaptent à tous les niveaux. L'objectif est de s'amuser, progresser et
+                prendre confiance à son rythme.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2"><button class="faq-question" type="button"><span>Doit-on fournir du matériel ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Non, tout le matériel est fourni. Il suffit de venir en tenue de sport confortable et une serviette.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3"><button class="faq-question" type="button"><span>Combien d'enfants par groupe ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Des petits groupes de 10 à 12 enfants pour un meilleur encadrement et une attention personnalisée.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-4"><button class="faq-question" type="button"><span>Où se déroulent les activités ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Dans nos 5 lieux à Saint-Denis : Sainte-Clotilde, Bellepierre, Proche centre-ville, Parc de la Trinité
+                et La Montagne.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-5"><button class="faq-question" type="button"><span>Puis-je accompagner mon enfant ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>Vous pouvez l'accompagner à l'arrivée, mais les séances se déroulent sans les parents pour favoriser
+                l'autonomie et la concentration.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-5"><button class="faq-question" type="button"><span>Comment réserver une séance ?</span>
+              <div class="faq-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+            </button>
+            <div class="faq-answer">
+              <p>C'est simple ! Cliquez sur « Réserver une séance » depuis notre menu ou page d'accueil, et suivez les
+                étapes en ligne.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Une question ? <br><span class="text-gradient">Écrivez-nous !</span></h2>
+          <p class="section-desc">Notre équipe vous répondra rapidement.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+              <div><span class="contact-label">Localisation</span><span class="contact-value">Saint-Denis, La
+                  Réunion</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg></div>
+              <div><span class="contact-label">Email</span><span
+                  class="contact-value">contact@kids-training-reunion.re</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></div>
+              <div><span class="contact-label">Téléphone</span><span class="contact-value">06 92 26 02 80</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="prenom">Prénom</label><input type="text" id="prenom" name="prenom" autocomplete="given-name"
+                  placeholder="Prénom de l'enfant" required aria-required="true"></div>
+              <div class="form-group"><label for="nom">Nom</label><input type="text" id="nom" name="nom" autocomplete="family-name"
+                  placeholder="Nom du parent" required aria-required="true"></div>
+            </div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"
+                placeholder="votre@email.com" required aria-required="true"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="telephone">Téléphone</label><input type="tel" id="telephone" autocomplete="tel"
+                  name="telephone" placeholder="06 92 XX XX XX" pattern="^0[0-9 ]{9,}$"></div>
+              <div class="form-group"><label for="age">Âge de l'enfant</label><select id="age" name="age" required aria-required="true">
+                  <option value="">Choisir</option>
+                  <option value="3-5">3 – 5 ans</option>
+                  <option value="6-8">6 – 8 ans</option>
+                  <option value="9-12">9 – 12 ans</option>
+                  <option value="13-17">13 – 17 ans</option>
+                </select></div>
+            </div>
+            <div class="form-group"><label for="activite">Activité</label><select id="activite" name="activite" autocomplete="off">
+                <option value="">Choisir une activité</option>
+                <option value="kids-training">Kids Training</option>
+                <option value="boxe-ludique">Boxe Ludique</option>
+              </select></div>
+            <div class="form-group"><label for="lieu">Lieu préféré</label><select id="lieu" name="lieu" autocomplete="off">
+                <option value="">Choisir un lieu</option>
+                <option value="bellepierre">Bellepierre</option>
+                <option value="sainte-clotilde">Sainte-Clotilde</option>
+                <option value="dynamique">Proche centre-ville</option>
+                <option value="trinite">Parc de la Trinité</option>
+                <option value="montagne">La Montagne</option>
+              </select></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="4"
+                placeholder="Dites-nous en plus sur vos besoins..."></textarea></div>
+            <p style="font-size:0.78rem; color:var(--ink-faint); margin-top:4px;">En envoyant ce formulaire, vous acceptez notre <a href="politique-confidentialite.html" style="color:var(--coral); text-decoration:underline;">politique de confidentialité</a>. Réponse sous 24h.</p>
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-lg btn-full"><span>Envoyer ma demande</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img class="logo-img" src="image/logo.png" alt="Kids Training Réunion" width="42" height="42">
+            <span class="logo-text">Kids Training<span class="logo-accent"> Réunion</span></span>
+          </a>
+          <p>Des séances de sport fun et ludiques pour le bien-être et l'épanouissement de vos enfants de 3 à 17 ans.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kids_training_reunion/" class="footer-social" aria-label="Instagram"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="https://www.youtube.com/@KidsTrainingReunion" class="footer-social" aria-label="YouTube"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@kidstrainingreunion" class="footer-social" aria-label="TikTok"
+              target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg></a>
+            <a href="https://www.facebook.com/profile.php?id=100055377537172" class="footer-social"
+              aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Explorer</p>
+          <div class="footer-nav-compact">
+            <div class="footer-links">
+              <a href="#nouveautes">Nouveauté</a>
+              <a href="#concours">Jeux Concours</a>
+              <a href="#activites">Activités</a>
+              <a href="#lieux">Lieux</a>
+              <a href="#tarifs">Tarifs</a>
+            </div>
+            <div class="footer-links footer-links--muted">
+              <a href="#confiance">Pourquoi nous</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+              <a href="blog.html">Blog</a>
+              <a href="chat.html">Discuter</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Nos activités</p>
+          <div class="sites-grid">
+            <a href="https://bike-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">🚲</span>
+              <span class="site-link-label">
+                <span class="site-link-name">Bike Ludique</span>
+                <span class="site-link-status">Bientôt disponible</span>
+              </span>
+            </a>
+            <a href="https://sport-anniversaire-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--coral-glow); color: var(--coral);">🎂</span>
+              <span class="site-link-label">
+                <span class="site-link-name">Sport Anniversaire</span>
+                <span class="site-link-status"><br>Bientôt disponible</span>
+              </span>
+            </a>
+            <a href="https://boxe-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--sun-glow); color: var(--sun-dark);">🥊</span>
+              <span class="site-link-label">
+                <span class="site-link-name">Boxe Ludique</span>
+                <span class="site-link-status">Bientôt disponible</span>
+              </span>
+            </a>
+            <a href="https://foot-ludique-reunion.com" class="site-link" target="_blank" rel="noopener">
+              <span class="site-link-icon" style="background: var(--teal-glow); color: var(--teal);">⚽</span>
+              <span class="site-link-label">
+                <span class="site-link-name">Foot Ludique</span>
+                <span class="site-link-status">Bientôt disponible</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-title">Légal</p>
+          <div class="footer-links"><a href="mentions-legales.html">Mentions légales</a><a href="politique-confidentialite.html">Politique de confidentialité</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Kids Training Réunion. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS À LA UNE — cliquables -->
+  <div id="adModal" style="display:none; position:fixed; inset:0; z-index:2000; background:rgba(28,27,46,0.6); backdrop-filter:blur(8px); align-items:center; justify-content:center; padding:18px;">
+    <div style="background:var(--paper); border-radius:18px; max-width:680px; width:100%; max-height:90vh; overflow:auto; border:1.5px solid var(--ink); box-shadow:8px 8px 0 var(--ink); position:relative;">
+      <button id="adModalClose" aria-label="Fermer" style="position:absolute; top:14px; right:14px; width:38px; height:38px; border-radius:50%; border:1.5px solid var(--ink); background:var(--paper); cursor:pointer;">✕</button>
+      <img id="adModalImg" src="" alt="" style="width:100%; height:220px; object-fit:cover; border-bottom:1.5px solid var(--ink); display:none;">
+      <div style="padding:22px;">
+        <span id="adModalBadge" class="ad-badge ad-badge--teal"></span>
+        <h3 id="adModalTitle" style="font-family:var(--font-display); font-size:1.5rem; margin:12px 0 8px;"></h3>
+        <div id="adModalText" style="color:var(--ink-soft); line-height:1.7; font-size:0.95rem;"></div>
+        <div style="margin-top:16px; display:flex; gap:10px;">
+          <a href="#contact" class="btn btn-primary btn-sm" onclick="document.getElementById('adModal').style.display='none'"><span>Réserver</span></a>
+          <button class="btn btn-ghost btn-sm" onclick="document.getElementById('adModal').style.display='none'">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // À la une — cartes cliquables avec textes (infos Facebook/site)
+    document.addEventListener("DOMContentLoaded", ()=>{
+      const adData = {
+        nouveautes: {
+          badge: "Nouveau • Dès 12 mois",
+          badgeClass: "ad-badge--teal",
+          img: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+          title: "Dès 12 mois — avec parent • Pilote",
+          text: "<strong>Infos officielles</strong> : Kids Training Réunion accueille désormais les tout-petits <strong>dès 12 mois</strong> (source site kids-training-reunion.re & Instagram @kids_training_reunion).<br><br><strong>12–24 mois</strong> : éveil sensori-moteur, parcours doux, jeux de manipulation — <strong>toujours avec un parent</strong>.<br><strong>2–3 ans</strong> : motricité globale, autonomie, confiance.<br><br><strong>Lieux pilotes</strong> : Bellepierre (51 bd Gastonville), Centre-ville, Parc de la Trinité — salles agréées ou plein air sécurisé.<br><strong>Encadrement</strong> : éducateurs diplômés BPJEPS, groupes 8 max, matériel fourni.<br><br><em>Infos Facebook : 35 chemin du Père Raimbault, La Montagne 97417 — 0692 26 02 80 — 5 lieux à Saint-Denis.</em>"
+        },
+        concours: {
+          badge: "Concours • 5 gagnants",
+          badgeClass: "ad-badge--sun",
+          img: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80",
+          title: "Jeu Concours — 1 mois offert",
+          text: "<strong>5 gagnants tirés au sort le 5 septembre 2026</strong> (source publication Facebook Kids Training Réunion).<br><br><strong>Comment participer (30 sec) :</strong> 1) Suivre @kids_training_reunion 2) Taguer 3 personnes en commentaire 3) Partager la publication.<br><br>Ouvert <strong>1–17 ans</strong>, tous lieux. Résultats en story Instagram + DM. Valeur 40€ / gagnant. <strong>Gratuit sans obligation d'achat.</strong><br><br><em>Plus d'infos : Instagram / Facebook Kids Training Réunion — 0692 26 02 80.</em>"
+        }
+      };
+      const modal = document.getElementById("adModal");
+      const modalImg = document.getElementById("adModalImg");
+      const modalBadge = document.getElementById("adModalBadge");
+      const modalTitle = document.getElementById("adModalTitle");
+      const modalText = document.getElementById("adModalText");
+      const modalClose = document.getElementById("adModalClose");
+      function openAd(id){
+        const d = adData[id];
+        if(!d || !modal) return;
+        modalImg.src = d.img; modalImg.style.display="block";
+        modalBadge.textContent = d.badge; modalBadge.className = "ad-badge " + d.badgeClass;
+        modalTitle.textContent = d.title;
+        modalText.innerHTML = d.text;
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+      document.querySelectorAll("#nouveautes, #concours").forEach(card=>{
+        card.style.cursor = "pointer";
+        card.addEventListener("click", (e)=>{
+          if(e.target.closest("a") && e.target.closest("a").href.includes("instagram")) return; // laisse instagram passer
+          openAd(card.id);
+        });
+      });
+      if(modalClose) modalClose.addEventListener("click", ()=>{ modal.style.display="none"; document.body.style.overflow=""; });
+      if(modal) modal.addEventListener("click", (e)=>{ if(e.target===modal) { modal.style.display="none"; document.body.style.overflow=""; }});
+      document.addEventListener("keydown", (e)=>{ if(e.key==="Escape" && modal.style.display==="flex"){ modal.style.display="none"; document.body.style.overflow=""; }});
+    });
+  </script>
+</body>
+
+</html>
